@@ -8,7 +8,7 @@ create a RESTful service that stores organisations with relations (parent to chi
 1. Download the repo files and place db.php, api.php files and .htaccess into your preferred server(In my case They are located in the XAMPP htdocs folder) and Import the api_db.sql file into your MySQL database client (in my case PHPMyAdmin for example) to create the necessary tables with sample data that was provided in the test work file.
 2. Make any neccessary changes in db.php
 3. Use Postman or any other similar program to insert your data.
-4. Included api_db.sql as example data to test out endpoint 2. (exactly the same data as it is in the test work task.)
+4. Included api_db.sql has example data to test out endpoint 2. (exactly the same data as it is in the test work task.)
 # File explanation
 - api.php   - Has the necessary code to run both endpoints.
 - db.php    - Has the necessary database connection settings.
