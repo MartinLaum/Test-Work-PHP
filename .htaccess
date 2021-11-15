@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteRule ^api/([A-Za-z0-9\ ]+)$ api.php?org_name=$1 [L]
+RewriteRule ^api/([A-Za-z0-9\ ]+)/([A-Za-z0-9\ ]+)$ api.php?org_name=$1&offset=$2 [L]
