@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2021
+-- Generation Time: Nov 15, 2021 at 01:44 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -34,6 +34,20 @@ CREATE TABLE `organizations` (
   `org_name` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `organizations`
+--
+
+INSERT INTO `organizations` (`id`, `org_name`) VALUES
+(2, 'Banana Tree'),
+(3, 'Big banana tree'),
+(7, 'Black Banana'),
+(5, 'Brown Banana'),
+(6, 'Green Banana'),
+(1, 'Paradise Island'),
+(8, 'Phoneutria Spider'),
+(4, 'Yellow Banana');
+
 -- --------------------------------------------------------
 
 --
@@ -46,6 +60,22 @@ CREATE TABLE `organization_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Dumping data for table `organization_info`
+--
+
+INSERT INTO `organization_info` (`org_id`, `org_relation_id`) VALUES
+(2, 1),
+(3, 1),
+(4, 2),
+(4, 3),
+(5, 2),
+(5, 3),
+(6, 3),
+(7, 2),
+(7, 3),
+(8, 7);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -53,7 +83,8 @@ CREATE TABLE `organization_info` (
 -- Indexes for table `organizations`
 --
 ALTER TABLE `organizations`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `org_name` (`org_name`);
 
 --
 -- Indexes for table `organization_info`
@@ -69,7 +100,7 @@ ALTER TABLE `organization_info`
 -- AUTO_INCREMENT for table `organizations`
 --
 ALTER TABLE `organizations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=418;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
