@@ -14,6 +14,6 @@ create a RESTful service that stores organisations with relations (parent to chi
 - db.php    - Has the necessary database connection settings.
 - .htaccess - Clean up URLs to provide prettier endpoints without the file extensions in the URL.
 # Example endpoint URLs (assuming it's running on localhost)
-http://localhost/new_api/api/Black%20banana
-http://localhost/new_api/api/Paradise%20Island/1
+http://localhost/new_api/api/Black%20banana <br />
+http://localhost/new_api/api/Paradise%20Island/1 <br />
 http://localhost/new_api/api/Black%20banana/2 (should return error: no records found!)
